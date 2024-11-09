@@ -1,0 +1,35 @@
+services:
+  app:
+    image: ghcr.io/0xfee1dead/app-for-course
+    restart: always
+    ports:
+      - 7313:80
+    environment:
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: postgres
+      DB_USERNAME: postgres
+      DB_PASSWORD: dbpassword
+
+  runmigrations:
+    image: ghcr.io/0xfee1dead/app-for-course
+    entrypoint: /docker-entrypoint.d/init.sh
+    environment:
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: postgres
+      DB_USERNAME: postgres
+      DB_PASSWORD: dbpassword
+
+  db:
+    image: docker.io/postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: dbpassword
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
