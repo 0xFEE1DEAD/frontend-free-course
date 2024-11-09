@@ -2,7 +2,7 @@
 
 Первые полноценные контейнеры использующие механизмы cgroups и Linux namespace
 
-[ ] Solaris Containers
-[ ] Linux-VServer
-[ ] FreeBSD Jail
-[ ] LXC
+* Solaris Containers
+* Linux-VServer
+* FreeBSD Jail
+* LXC
