@@ -2,7 +2,6 @@
 
 Прочитать статью:
 https://habr.com/ru/companies/serverspace/articles/741874/
-(http://web.archive.org/web/20230615225913/https://habr.com/ru/companies/serverspace/articles/741874/)
 
 И ответить на следующие вопрос:
 
